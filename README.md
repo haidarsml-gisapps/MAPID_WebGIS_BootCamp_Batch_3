@@ -7,4 +7,4 @@ Repository ini digunakan sebagai tempat pengumpulan tugas, latihan, dan project 
 
 ##Task 2 DONE - PROJECT PLAN
 
-##Task 3 DONE - HTML, CSS & JS
+##Task 3 DONE - HTML, CSS & JS (ada di file index.html; about.html; map.html)
