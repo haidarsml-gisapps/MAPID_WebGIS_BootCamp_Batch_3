@@ -6,3 +6,5 @@ Repository ini digunakan sebagai tempat pengumpulan tugas, latihan, dan project 
 ##Task 1 DONE - GeoJson File QGIS dan Documentasi
 
 ##Task 2 DONE - PROJECT PLAN
+
+##Task 3 DONE - HTML, CSS & JS
