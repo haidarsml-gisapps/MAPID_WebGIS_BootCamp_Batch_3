@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4 Materi HTML, CSS dan JS</title>
+    <!-- Link to our custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Tailwind CDN for simple utilities, as allowed by requirements -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">Dashboard Monitoring</a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="map.html" class="nav-link">Map</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Task-4 Materi HTML, CSS dan JS</h2>
+            <h1>Integrated Plantation Monitoring Dashboard</h1>
+            <p>
+                Selamat datang di dashboard monitoring perkebunan terintegrasi kami. 
+                Di sini Anda dapat memantau berbagai aspek operasional perkebunan, 
+                mulai dari <mark>GIS Monitoring</mark> hingga <mark>Infrastructure Monitoring</mark>. 
+                Dashboard ini dirancang untuk memberikan <small>informasi kunci</small> secara <small>cepat dan efisien</small> 
+                untuk mendukung pengambilan keputusan. Kami percaya bahwa dengan data yang <strong>akurat</strong> dan 
+                tampilan yang <strong>bersih</strong>, pengelolaan perkebunan akan menjadi lebih <strong style="color: #2563EB;">mudah</strong> dan <em style="color: #2563EB;">efektif</em>.
+            </p>
+        </section>
+
+        <!-- KPI Cards Section -->
+        <section>
+            <h2>KPI Cards</h2>
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <h3>Total Estate</h3>
+                    <p>12</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Total Block</h3>
+                    <p>150</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Production Today</h3>
+                    <p>120 Ton</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Fertilized Area</h3>
+                    <p>85%</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Road Condition</h3>
+                    <p>Good</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Rainfall</h3>
+                    <p>15 mm</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Harvest Progress</h3>
+                    <p>75%</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Active Workers</h3>
+                    <p>230</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operational Monitoring Table -->
+        <section>
+            <h2>Operational Monitoring Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estate</th>
+                        <th>Block</th>
+                        <th>Production (Ton)</th>
+                        <th>Fertilizer Status</th>
+                        <th>Road Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Estate A</td>
+                        <td>Block 1</td>
+                        <td>10</td>
+                        <td>Completed</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td>Estate A</td>
+                        <td>Block 2</td>
+                        <td>8</td>
+                        <td>In Progress</td>
+                        <td>Fair</td>
+                    </tr>
+                    <tr>
+                        <td>Estate B</td>
+                        <td>Block 3</td>
+                        <td>12</td>
+                        <td>Completed</td>
+                        <td>Good</td>
+                    </tr>
+                    <tr>
+                        <td>Estate C</td>
+                        <td>Block 4</td>
+                        <td>7</td>
+                        <td>Pending</td>
+                        <td>Poor</td>
+                    </tr>
+                    <tr>
+                        <td>Estate C</td>
+                        <td>Block 5</td>
+                        <td>9</td>
+                        <td>Completed</td>
+                        <td>Fair</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Monitoring Modules -->
+        <section>
+            <h2>Monitoring Modules</h2>
+            <ul>
+                <li>GIS Monitoring</li>
+                <li>Production Monitoring</li>
+                <li>Census Monitoring</li>
+                <li>Fertilizer Monitoring</li>
+                <li>Infrastructure Monitoring</li>
+            </ul>
+        </section>
+
+        <!-- Project Workflow -->
+        <section>
+            <h2>Project Workflow</h2>
+            <ol>
+                <li>Data Collection</li>
+                <li>Data Validation</li>
+                <li>Dashboard Design</li>
+                <li>Map Integration</li>
+                <li>Reporting</li>
+            </ol>
+        </section>
+
+        <!-- Monitoring Filter Form -->
+        <section>
+            <h2>Monitoring Filter Form</h2>
+            <form>
+                <div>
+                    <label for="estate-name">Estate Name (Text Input):</label>
+                    <input type="text" id="estate-name" name="estate-name" placeholder="e.g., Estate A">
+                </div>
+                <div>
+                    <label for="min-production">Minimum Production (Number Input):</label>
+                    <input type="number" id="min-production" name="min-production" min="0" value="0">
+                </div>
+                <div>
+                    <label for="report-date">Report Date (Date Input):</label>
+                    <input type="date" id="report-date" name="report-date">
+                </div>
+                <div>
+                    <label for="monitor-type">Monitoring Type (Dropdown Select):</label>
+                    <select id="monitor-type" name="monitor-type">
+                        <option value="gis">GIS Monitoring</option>
+                        <option value="production">Production Monitoring</option>
+                        <option value="census">Census Monitoring</option>
+                        <option value="fertilizer">Fertilizer Monitoring</option>
+                        <option value="infrastructure">Infrastructure Monitoring</option>
+                    </select>
+                </div>
+                <div class="radio-group">
+                    <label>Data Source (Radio Button):</label>
+                    <input type="radio" id="source-satellite" name="data-source" value="satellite">
+                    <label for="source-satellite">Satellite</label>
+                    <input type="radio" id="source-drone" name="data-source" value="drone">
+                    <label for="source-drone">Drone</label>
+                    <input type="radio" id="source-manual" name="data-source" value="manual">
+                    <label for="source-manual">Manual</label>
+                </div>
+                <div class="checkbox-group">
+                    <label>Alert Preferences (Checkbox):</label>
+                    <input type="checkbox" id="alert-email" name="alert-email" value="email">
+                    <label for="alert-email">Email Alerts</label>
+                    <input type="checkbox" id="alert-sms" name="alert-sms" value="sms">
+                    <label for="alert-sms">SMS Alerts</label>
+                </div>
+                <div>
+                    <label for="additional-notes">Additional Notes (Textarea):</label>
+                    <textarea id="additional-notes" name="additional-notes" placeholder="Enter any additional notes here..."></textarea>
+                </div>
+                <button type="submit">Apply Filters</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2026 Task-4 Materi HTML, CSS dan JS</p>
+        <p>Integrated Plantation Monitoring Dashboard</p>
+    </footer>
+</body>
+</html>
