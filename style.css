@@ -267,8 +267,199 @@ button[type="submit"]:hover {
     margin: 5px 0;
 }
 
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2563EB;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1A4A9C;
+}
+
+.btn-secondary {
+    background-color: #6B7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #4B5563;
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* 16px */
+}
+
+.ml-4 {
+    margin-left: 1rem; /* 16px */
+}
+
+/* Apotek Cards Grid */
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+/* Flexbox untuk layout peta dan sidebar filter */
+.map-container-flex {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#mapid {
+    height: 500px;
+    flex: 2; /* Peta memakan space 2 bagian */
+    border-radius: 8px;
+    position: relative;
+}
+
+.map-sidebar {
+    flex: 1; /* Sidebar memakan space 1 bagian */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.map-sidebar section {
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+/* Custom legend di dalam Leaflet */
+.leaflet-bottom.leaflet-left .legend-in-map {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+    margin: 10px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
+}
+
+.legend-in-map h4 {
+    margin: 0 0 5px;
+    color: #2563EB;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.legend-item-inline {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-item-inline .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* Style untuk list/card Apotek agar muat di sidebar */
+#apotekCards {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.apotek-card-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apotek-card-item:hover {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+}
+
+.apotek-card-item h4 {
+    color: #1e3a8a;
+    font-size: 14px;
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.apotek-card-item p {
+    font-size: 11px;
+    margin: 2px 0;
+    color: #475569;
+}
+
 /* Responsive Styles (testing doang)*/
 @media (max-width: 768px) {
+    .map-container-flex {
+        flex-direction: column;
+    }
+
     .navbar-container {
         flex-direction: column;
         text-align: center;

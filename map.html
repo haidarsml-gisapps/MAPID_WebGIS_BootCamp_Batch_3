@@ -27,8 +27,43 @@
     <main class="container">
         <section>
             <h1>Live Plantation Map</h1>
-            <!-- Map Container -->
-            <div id="mapid"></div>
+            <div class="map-container-flex">
+                <!-- Map Container -->
+                <div id="mapid"></div>
+                <div class="map-sidebar">
+                    <section>
+                        <h2>Map Filters</h2>
+                        <form>
+                            <div>
+                                <label for="estate-select">Select Estate:</label>
+                                <select id="estate-select" name="estate-select">
+                                    <option value="all">All Estates</option>
+                                    <option value="estate-a">Estate A</option>
+                                    <option value="estate-b">Estate B</option>
+                                    <option value="estate-c">Estate C</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="layer-select">Select Layer:</label>
+                                <select id="layer-select" name="layer-select">
+                                    <option value="all">All Layers</option>
+                                    <option value="boundaries">Estate Boundaries</option>
+                                    <option value="roads">Roads</option>
+                                    <option value="points">Collection Points</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="search-input">Search:</label>
+                                <input type="text" id="search-input" name="search-input" placeholder="Search map features...">
+                            </div>
+                            <button type="submit">Apply Map Filters</button>
+                        </form>
+                    </section>
+                    <div id="apotek-section-container">
+                        <!-- Fasilitas Kesehatan section will be moved here by script.js -->
+                    </div>
+                </div>
+            </div>
             <p>
                 Peta interaktif ini menampilkan informasi geospasial terkait perkebunan. 
                 Gunakan <strong style="color: #2563EB;">fitur zoom</strong> dan <em style="color: #2563EB;">pan</em> untuk eksplorasi lebih lanjut. 
@@ -37,127 +72,16 @@
                 tentang kondisi geografis di lapangan.
             </p>
         </section>
-
-        <!-- Legend Box -->
-        <section>
-            <h2>Legend</h2>
-            <div class="legend-box">
-                <div class="legend-item">
-                    <div class="legend-color estate"></div>
-                    <span>Estate Area</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color road"></div>
-                    <span>Road</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color collection-point"></div>
-                    <span>Collection Point</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color office"></div>
-                    <span>Office</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Layer Information Table -->
-        <section>
-            <h2>Layer Information</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Layer Name</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Estate Boundaries</td>
-                        <td>Polygon</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Main Roads</td>
-                        <td>Line</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Collection Points</td>
-                        <td>Point</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Office Locations</td>
-                        <td>Point</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Drainage Network</td>
-                        <td>Line</td>
-                        <td>Inactive</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Dummy Filter Form -->
-        <section>
-            <h2>Map Filters</h2>
-            <form>
-                <div>
-                    <label for="estate-select">Select Estate:</label>
-                    <select id="estate-select" name="estate-select">
-                        <option value="all">All Estates</option>
-                        <option value="estate-a">Estate A</option>
-                        <option value="estate-b">Estate B</option>
-                        <option value="estate-c">Estate C</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="layer-select">Select Layer:</label>
-                    <select id="layer-select" name="layer-select">
-                        <option value="all">All Layers</option>
-                        <option value="boundaries">Estate Boundaries</option>
-                        <option value="roads">Roads</option>
-                        <option value="points">Collection Points</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="search-input">Search:</label>
-                    <input type="text" id="search-input" name="search-input" placeholder="Search map features...">
-                </div>
-                <button type="submit">Apply Map Filters</button>
-            </form>
-        </section>
     </main>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <p>© 2026 Task-4 Materi HTML, CSS dan JS</p>
+        <p>MAPID WebGIS Bootcamp Task-4 Materi HTML, CSS dan JS</p>
         <p>Integrated Plantation Monitoring Dashboard</p>
     </footer>
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        // Initialize the map
-        var map = L.map('mapid').setView([-2.5, 118.5], 5); // Centered over Indonesia
-
-        // Add OpenStreetMap tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Add a marker for an example location (e.g., a plantation office)
-        L.marker([-2.5, 118.5]).addTo(map)
-            .bindPopup('A sample plantation office.')
-            .openPopup();
-
-        // You can add more layers here later if needed (e.g., GeoJSON data)
-        // For now, this is a basic map setup.
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -8,3 +8,5 @@ Repository ini digunakan sebagai tempat pengumpulan tugas, latihan, dan project 
 ##Task 2 DONE - PROJECT PLAN
 
 ##Task 3 DONE - HTML, CSS & JS (ada di file index.html; about.html; map.html)
+
+##Task 4 DONE - Interaksi Dinamis dengan JavaScript
